@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #707070;
+    --gray-light: #F7F7F7;
+    --gray-dark: #343A40;
+    --gray-darker: #212529;
+    --blue: #0062E6;
+    --red: #F00000;
+    --green: #28A745;
+    --orange: #FF8800;
+    --yellow: #FFC107;
+    --purple: #8113ff;
+    --cyan: #17A2B8;
+    --dark: #343A40;
+    --light: #F7F7F7;
+    --light-gray: #F2F2F2;
+}
+
+main {
+    min-height: 100vh;
+    background: var(--black);
+    position: relative;
+    isolation: isolate;
+}
+
+main::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--purple);
+    width: 35rem;
+    aspect-ratio: 1;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(200px);
+}
+
+main::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+     background-image: linear-gradient(
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.15) 1px,
+        transparent 1px
+    );
+    background-size: 70px 70px;
+    z-index: -2;
+}
+
+.navbar{
+    height: 14vh;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section{
+    min-height: calc(100vh - 14vh);
+    position: relative;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1{
+    font-size: 20rem;
+    color: var(--white);
+    font-family: "Corinthia", cursive;
+    font-weight: 400;
+    position: relative;
+
+}
+
+.hero-section h1::after{
+    content: "Full Stack Developer";
+    font-family: "Poppins", serif;
+    font-size: 1.4rem;
+    position: absolute;
+    right: -15%;
+    bottom: 17%;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+
+}
+
+img{
+    width: 30rem;
+    bottom: 0;
+    position: absolute;
+}
+
+.hero-section p{
+    position: absolute;
+    color:var(--white);
+    font-size: 0.95rem;
+    max-width: 350px;
+    left: 5%;
+    top: 23%;
+    letter-spacing: 0.02rem;
+}
+
+.fa-neos{
+    font-size: 2.5rem;
+    color: var(--purple);
+}
+
+.navlist{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navlist li{
+    list-style: none;
+    
+}
+
+.navlist li a{
+    text-decoration: none;
+}
+
+.navlist-item{
+    color: white;
+    border: .1rem solid #8113ff6e;
+    padding: .4rem 1rem;
+    border-radius: 5rem;
+    transition: .2s ease-in-out;
+}
+
+.navlist-item:hover{
+    background: #8113ff;
+}
+
+.nav-btn{
+    background: var(--purple);
+    padding: .6rem 1.5rem;
+    border-radius: 5rem;
+    color: white;
+    font-size: 1rem;
+    
+}
+
+.social-icon{
+    display: flex;
+    flex-direction: column;
+gap:1rem ;   
+position: absolute;
+left: 20px;
+bottom: 40px;
+
+}
+
+.icon{
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--white);
+    text-align: center;
+    line-height: 40px;
+    transition: .5s ease-in-out;
+}
+
+.fab{
+    color: var(--purple);
+    font-size: 1.1rem;
+    transition: .5s ease-in-out;
+}
+
+.icon:hover{
+    transform: translateX(30%);
+    background: var(--purple);
+    color: var(--white);
+}
+
+.icon:hover .fab{
+    color: var(--white);
+}
+
+.fa-bars{
+font-size: 1.6rem;
+color: var(--white);
+}
+
+.hamburger{
+    display: none;
+}
+
+
+
+
+@media  screen and (max-width: 680px){
+    .navlist{
+        flex-direction: column;
+        position: absolute;
+        top:-100%;
+        left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    width: 23rem;
+    padding-block: 3rem;
+    z-index: 4;
+    gap: 3rem;
+    border-radius: 2rem;
+backdrop-filter: blur(10px);
+transition: .7s ease-in-out;
+    }
+
+    .active{
+    top: 15%;
+    }
+
+.hamburger{
+    display: block;
+}
+
+img{
+    width: 20rem;
+}
+main::before{
+    width: 25rem;
+    aspect-ratio: 1;
+}
+
+.hero-section h1{
+    font-size: 8rem;
+    right: 10px;
+}
+
+.hero-section h1::after{
+font-size: 1rem;
+bottom: -80%;
+}
+
+.hero-section {
+    align-items: flex-start;
+}
+
+.hero-section p{
+    font-size: 0.9rem;
+}
+}
