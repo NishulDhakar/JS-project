@@ -19,7 +19,7 @@ A responsive personal portfolio website showcasing my skills and projects.
 
 ## 🔗 Project Links
 - 🚀 **Live Demo**: [View Portfolio](https://nishuldhakar.github.io/JS-project/)
-- 💻 **Repository**: [Portfolio_3](https://github.com/nishuldhakar/JS-project)
+- 💻 **Repository**: [JS 1st Project](https://github.com/nishuldhakar/JS-project)
 
 ## 📱 Project Preview
 <img width="1710" alt="Screenshot 2024-11-13 at 3 24 39 PM" src="https://github.com/user-attachments/assets/5539266d-7895-4db1-9240-1eeba11e900b">
