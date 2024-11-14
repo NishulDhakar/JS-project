@@ -3,7 +3,7 @@
 A responsive personal portfolio website showcasing my skills and projects.
 
 ## 🛠️ Technologies Used
-- HTML
+- HTML5
 - CSS
 - JavaScript (Basic)
 
